@@ -494,11 +494,17 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(1deg, #13547a00 0%, #80d0c7 100%), url('/images/image_8632.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center; 
   position: relative;
   overflow: hidden;
   padding-top: 150px;
   padding-bottom: 150px;
+  flex-direction: column;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .hero-section .input-group {
@@ -532,13 +538,12 @@ strong {
   TOPICS              
 -----------------------------------------*/
 .featured-section {
-  background-color: var(--secondary-color);
   border-radius: 0 0 100px 100px;
   padding-bottom: 100px;
 }
 
 .featured-section .row {
-  position: relative;
+  position: inherit;
   bottom: 100px;
   margin-bottom: -100px;
 }
@@ -1181,6 +1186,21 @@ blockquote {
   }
   .featured-section{
     height: 900px !important;
+  }
+  .hero-section{
+    background-image: linear-gradient(1deg, #13547a00 0%, #80d0c7 15%), url('/images/image_8632.jpg') !important;
+  }
+}
+@media screen and (max-width: 990px){
+  .hero-section{
+      background-image: linear-gradient(1deg, #13547a00 0%, #80d0c7 42%), url('/images/image_8632.jpg');
+      background-size: contain;
+      background-position: bottom;
+  }
+}
+@media screen and (max-width: 768px){
+  .hero-section{
+      background-image: linear-gradient(1deg, #13547a00 0%, #80d0c7 30%), url('/images/image_8632.jpg') ;
   }
 }
 @media screen and (min-width: 800px) {
