@@ -10,16 +10,18 @@ https://templatemo.com/tm-590-topic-listing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #80d0c7;
-  --custom-btn-bg-hover-color:    #13547a;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
+  --white-color:                  #0b4050;
+  --primary-color:                #0b4050;
+  --secondary-color:              #fdfdfd;
+  --section-bg-color:             #0b4050;
+  --custom-btn-bg-color:          #64CCC5;
+  --custom-btn-bg-hover-color:    #0b4050;
+  --dark-color:                   #a3a7b4;
+  --light-color:                  #a3a7b4;
+  --p-color:                      #EEEEEE;
+  --p-color-dark:                 #2e2b2b;
   --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a;
+  --link-hover-color:             #64CCC5;
 
   --body-font-family:             'Open Sans', sans-serif;
   --title-font-family:            'Montserrat', sans-serif;
@@ -101,7 +103,7 @@ h6 {
 }
 
 p {
-  color: var(--p-color);
+  color: var(--p-color-dark);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-normal);
 }
@@ -141,13 +143,15 @@ strong {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.p_dark{
+  color: var(--p-color) !important;
+}
 .section-bg {
   background-color: var(--section-bg-color);
 }
 
 .section-overlay {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 240%);
   position: absolute;
   top: 0;
   left: 0;
@@ -172,6 +176,8 @@ strong {
   justify-content: center;
 }
 
+
+
 .nav-tabs .nav-link {
   border-radius: 0;
   border-top: 0;
@@ -190,12 +196,19 @@ strong {
 }
 
 .nav-tabs .nav-item.show .nav-link, 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus, 
 .nav-tabs .nav-link:hover {
-  border-bottom-color: var(--primary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--custom-btn-bg-color);
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
   color: var(--primary-color);
 }
+
+.contact-section p, .copyright-text{
+  color: var(--secondary-color)
+}
+
 
 
 /*---------------------------------------
@@ -287,9 +300,17 @@ strong {
   background-color: var(--secondary-color);
 }
 
+.sticky-wrapper .nav-link {
+  color: var(--secondary-color) !important;
+}
+
+.sticky-wrapper.is-sticky .nav-link {
+  color: var(--primary-color) !important;
+}
+
 .navbar {
-  background: transparent;
-  border-bottom: 1px solid rgba(128, 208, 199, 0.35);
+  background: linear-gradient(170deg, #fbf7f7, transparent);;
+  border-bottom: 0px solid rgba(128, 208, 199, 0.35);
   z-index: 9;
 }
 
@@ -377,7 +398,7 @@ strong {
 .navbar .dropdown-item:focus, 
 .navbar .dropdown-item:hover {
   background: transparent;
-  color: var(--primary-color);
+  color: var(--link-hover-color);
 }
 
 .navbar .dropdown-toggle::after {
@@ -494,7 +515,7 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(1deg, #13547a00 0%, #80d0c7 100%), url('/images/image_8632.jpg');
+  background-image: linear-gradient(1deg, #13547a00 0%,var(--primary-color) 100%), url('/images/image_8632.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center; 
@@ -818,7 +839,7 @@ blockquote {
 
 .timeline-container .vertical-scrollable-timeline li .icon-holder i {
   font-size: 25px;
-  color: var(--white-color);
+  color: var(--custom-btn-bg-color);
 }
 
 .timeline-container .vertical-scrollable-timeline li::before {
@@ -863,7 +884,7 @@ blockquote {
 }
 
 .faq-section .accordion-body {
-  color: var(--p-color);
+  /* color: var(--p-color); */
   font-size: var(--btn-font-size);
   line-height: 40px;
 }
@@ -975,7 +996,7 @@ blockquote {
 
 .site-footer .dropdown-item:hover {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--link-hover-color);
 }
 
 .site-footer .dropdown-menu li:first-child .dropdown-item {
@@ -1084,6 +1105,8 @@ blockquote {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  
+  /* background: linear-gradient(170deg, #fbf7f7, transparent); */
   
   .navbar {
     background-color: var(--secondary-color);
