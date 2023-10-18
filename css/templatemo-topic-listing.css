@@ -51,7 +51,14 @@ body {
   background-color: var(--white-color);
   font-family: var(--body-font-family); 
 }
-
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -351,7 +358,18 @@ strong {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
+#cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border: solid 2px var(--link-hover-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  border-style: dashed ;
+  transform: translate(-50%, -50%);
+  animation: rotate 600ms linear infinite; /* Rotate continuously */
+}
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
   color: var(--link-hover-color) !important;
@@ -954,7 +972,8 @@ blockquote {
 .custom-form button[type="submit"]:hover,
 .custom-form button[type="submit"]:focus {
   background: var(--custom-btn-bg-hover-color);
-  border-color: transparent;
+  border: solid 1px;
+  color: var(--border-color);
 }
 
 
